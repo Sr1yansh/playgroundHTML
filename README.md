@@ -7,8 +7,7 @@ In this project we've developed a service to generate digital ceritificate image
   <li>Mongoose</li>
   <li>ExpressJs</li>
   <li>Joi</li>
-  <li>Mocha</li>
-  <li>Jest</li>
+  <li>Canvas</li>
   
 ## Code Setup Steps
 
@@ -31,7 +30,7 @@ node app.js
 
 Method | POST
 -------| ----
-**URL**| your post api URL
+**URL**|localhost:3000/api/generateCertificate
 
 ##### Accepted Parameters
 
@@ -43,11 +42,11 @@ customText  | string | To overwrite default certificate text user can add their 
 
 ##### Curl Request With Default Values
 ```
-curl --location --request POST 'http://localhost:8081/staging/su/verloopBot' \
+curl --location --request POST 'localhost:3000/api/generateCertificate' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "userName":"Harshit",
-    "city":"Bombay"
+    "name":"kb231231312313123",
+    "customText":"Mai @@ Ishwar ki shapat leta hun hello hello hello hello ajbdksabd kasbf kjsdbf kjsdbf kjsdb fkjsdb fkjsdb fkjsdb jkfbsdkj bfkjsd bfkjsdb fjksdbf kjsbdfkj sdbfkj bsdfkj bsdkjfb kjsdfb kjsdbf kjsdbf kjsdb fkjsdb f"
 }'
 ```
 
@@ -55,7 +54,7 @@ curl --location --request POST 'http://localhost:8081/staging/su/verloopBot' \
 
   Method | GET
 -------| ----
-**URL**| your get api URL
+**URL**| localhost:3000/api/getCertificate?id=60e8b32bd46a4c4a9d60c283
 
 ##### Accepted Parameters
 
@@ -65,5 +64,5 @@ Parameters  | Type   | Description
 
 ##### Curl Request With Default Values
 ```
-curl --location --request GET 'http://localhost:8081/staging/su/affiliate/cityAndStates'
+curl --location --request GET 'localhost:3000/api/getCertificate?id=60e8b32bd46a4c4a9d60c283'
 ```
