@@ -54,7 +54,7 @@ curl --location --request POST 'localhost:3000/api/generateCertificate' \
 
   Method | GET
 -------| ----
-**URL**| localhost:3000/api/getCertificate?id=60e8b32bd46a4c4a9d60c283
+**URL**| localhost:3000/api/getCertificate?id={yourCertificateId}
 
 ##### Accepted Parameters
 
@@ -64,5 +64,5 @@ Parameters  | Type   | Description
 
 ##### Curl Request With Default Values
 ```
-curl --location --request GET 'localhost:3000/api/getCertificate?id=60e8b32bd46a4c4a9d60c283'
+curl --location --request GET 'localhost:3000/api/getCertificate?id=60e9ec1d4ab7f7625c581bdf'
 ```
